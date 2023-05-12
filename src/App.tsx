@@ -1,24 +1,12 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import MainView from './components/MainView';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div
+      className="container bg-light py-5 px-3 my-0 mx-auto rounded"
+      style={{ maxWidth: '800px' }}
+    >
+      <h1 className="mb-5">Weather Forecast</h1>
+      <MainView />
     </div>
   );
 }
