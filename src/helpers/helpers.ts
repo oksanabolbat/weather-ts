@@ -48,7 +48,6 @@ export interface TodayWeatherProps {
   city: string;
   description: string;
   icon: IconsKeysProps;
-  ready: boolean;
 }
 
 export interface WeatherProps {

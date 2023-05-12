@@ -33,6 +33,7 @@ const SearchForm: React.FC<Props> = (props) => {
 
   const submitHandler = (event: React.SyntheticEvent) => {
     event.preventDefault();
+
     if (currenrCity.length > 1) {
       props.updateWeather(currenrCity);
     }

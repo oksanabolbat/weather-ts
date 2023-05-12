@@ -5,6 +5,7 @@ interface Props {
   data: TodayWeatherProps;
   units: UnitsProps;
   changeUnits: () => void;
+  updateCity: (city: string) => void;
 }
 const unitsClasses =
   'btn btn-link px-0 pt-2 text-black text-decoration-none fs-5';

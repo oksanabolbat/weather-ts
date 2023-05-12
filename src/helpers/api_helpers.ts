@@ -3,7 +3,7 @@ import axios from 'axios';
 import { CoordsProps, UnitsProps } from './helpers';
 
 export const apiKey = '668da14f2dd183d5f357bb8c35faa1a0';
-//const units = 'metric';
+
 const apiUrl = `https://api.openweathermap.org/data/2.5/weather`;
 
 export const getWeatherData = (city: string, units: UnitsProps) => {
@@ -15,7 +15,8 @@ export const getWeatherData = (city: string, units: UnitsProps) => {
         units,
       },
     })
-    .then((response) => response);
+    .then((response) => response)
+    .catch(() => null);
 };
 
 export const getWeatherForecast = (city: string, units: UnitsProps) => {
@@ -27,7 +28,8 @@ export const getWeatherForecast = (city: string, units: UnitsProps) => {
         units,
       },
     })
-    .then((response) => response.data.daily);
+    .then((response) => response.data.daily)
+    .catch(() => null);
 };
 
 export const getCityNameByCoords = (coords: CoordsProps): Promise<string> => {
